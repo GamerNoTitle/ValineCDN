@@ -1,6 +1,6 @@
 import os
 remotepath = 'https://valinecdn.bili33.top/'
-prefix= ''
+prefix= 'Menhera-chan'
 def findAllFile(base):
     for root, ds, fs in os.walk(base):
         for f in fs:
