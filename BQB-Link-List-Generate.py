@@ -1,6 +1,6 @@
 import os
 remotepath = 'https://valinecdn.bili33.top/'
-prefix= ''
+prefix= input("请输入前缀：")
 def findAllFile(base):
     for root, ds, fs in os.walk(base):
         for f in fs:
