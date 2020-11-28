@@ -4,7 +4,8 @@ prefix= input("请输入前缀：")
 def findAllFile(base):
     for root, ds, fs in os.walk(base):
         for f in fs:
-            yield f
+            if f!='BQB-Link-List-Generate.py' and f!='mini.py':
+                yield f
 
 def main():
     base = './'
