@@ -7,8 +7,9 @@ def walkFile(FilePath):
         for f in files:
             if f!='mini.py':
                 Path=os.path.join(root, f)
-                S+="'"+f+"',"
+                S+='"'+f+'",'
     S+="]}"
+    S=S.replace(",]}", "]}")
     print("正在写入文件，这通常不会太久...")
     with open("./index.json","wb") as ff:
         ff.write(S.encode("utf-8"))
