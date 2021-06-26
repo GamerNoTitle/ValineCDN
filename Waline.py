@@ -17,13 +17,6 @@ def WalineGenerate():
         types = 'png'
         print(currentdir)
         if currentdir != '.' and ('.git' in currentdir) != True:
-            for file in (files):
-                if '.gif' in file:
-                    types = 'gif'
-                    break
-                elif '.jpg' in file:
-                    types = '.jpg'
-                    break
             for remove in removelist:
                 print(remove)
                 try:
@@ -35,8 +28,6 @@ def WalineGenerate():
             print(currentdir)
             jsontamplatedict={
                 "name": "{}".format(currentdir.replace(".","")),
-                "prefix": "{}".format(currentdir.replace(".",'')) + "_",
-                "type": "{}".format(types),
                 "icon": "{}".format(files[0]),
                 "items": files
             }
